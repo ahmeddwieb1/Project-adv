@@ -112,8 +112,12 @@ public class Laptop implements Technology {
     @Override
     public double Price() {
         double total = basePrice;
-        if (isTouchscreen) total += 150;
-        if (screenSize > 15.6) total += 100;
+        if (isTouchscreen) {
+            total += 1000;
+        }
+        if (screenSize > 15.6) {
+            total += 600;
+        }
         return total;
     }
 
@@ -131,17 +135,18 @@ public class Laptop implements Technology {
         return (screenSize * weight) / batteryLife;
     }
 
-    //todo
+
     @Override
     public void displaySpecs() {
-        System.out.println("Laptop Specifications:" );
+        System.out.println("Laptop Specifications:");
         System.out.println("Brand: " + brand);
         System.out.println("Model: " + model);
         System.out.println("Processor: " + processor);
         System.out.println("ScreenSize: " + screenSize + " inh");
         System.out.println("Storage: " + storageGB + " GB");
         System.out.println("ram: " + ramGB + " GB");
-        System.out.println("price: " + Price() + "$");
+        System.out.println("weight" + weight + " grams");
+        System.out.println("price: " + Price() + " $");
 
     }
 }

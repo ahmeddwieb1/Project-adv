@@ -5,12 +5,12 @@ import java.util.List;
 public class TechStore {
     private List<Technology> inventory;
     private String storeName;
-    private String location;
+
     private double revenue;
 
-    public TechStore(String storeName, String location) {
+    public TechStore(String storeName) {
         this.storeName = storeName;
-        this.location = location;
+
         this.inventory = new ArrayList<>();
         this.revenue = 0.0;
     }

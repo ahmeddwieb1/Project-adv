@@ -32,79 +32,60 @@ public class Phone implements Technology {
     public String getBrand() {
         return brand;
     }
-
     public void setBrand(String brand) {
         this.brand = brand;
     }
-
     public String getModel() {
         return model;
     }
-
     public void setModel(String model) {
         this.model = model;
     }
-
     public String getOs() {
         return os;
     }
-
     public void setOs(String os) {
         this.os = os;
     }
-
     public double getScreenSize() {
         return screenSize;
     }
-
     public void setScreenSize(double screenSize) {
         this.screenSize = screenSize;
     }
-
     public int getStorageGB() {
         return storageGB;
     }
-
     public void setStorageGB(int storageGB) {
         this.storageGB = storageGB;
     }
-
     public int getRamGB() {
         return ramGB;
     }
-
     public void setRamGB(int ramGB) {
         this.ramGB = ramGB;
     }
-
     public int getBatteryCapacity() {
         return batteryCapacity;
     }
-
     public void setBatteryCapacity(int batteryCapacity) {
         this.batteryCapacity = batteryCapacity;
     }
-
     public int getCameraMP() {
         return cameraMP;
     }
-
     public void setCameraMP(int cameraMP) {
         this.cameraMP = cameraMP;
     }
-
     public double getBasePrice() {
         return basePrice;
     }
-
     public void setBasePrice(double basePrice) {
         this.basePrice = basePrice;
     }
-
     public boolean isIs5GCapable() {
         return is5GCapable;
     }
-
     public void setIs5GCapable(boolean is5GCapable) {
         this.is5GCapable = is5GCapable;
     }
@@ -141,6 +122,7 @@ public class Phone implements Technology {
         System.out.println("Storage: " + storageGB + "GB");
         System.out.println("Camera: " + cameraMP + "MP");
         System.out.println("ram :" + ramGB+"GB");
+        System.out.println("batteryCapacity: "+batteryCapacity);
         System.out.println("final Price: " + Price()+"$");
     }
 }
