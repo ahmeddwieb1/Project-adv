@@ -1,4 +1,4 @@
-public class Phone implements Technology {
+public class Phone extends Product {
 
     private String brand;
     private String model;
@@ -11,12 +11,15 @@ public class Phone implements Technology {
     private double basePrice;
     private boolean is5GCapable;
 
-    public Phone() {
+    public Phone(int id, String name, String type) {
+        super(id, name, type);
     }
 
-    public Phone(String brand, String model, String os, double screenSize,
-                 int storageGB, int ramGB, int batteryCapacity, int cameraMP,
+    public Phone(int id, String name, String type, String brand,
+                 String model, String os, double screenSize, int storageGB,
+                 int ramGB, int batteryCapacity, int cameraMP,
                  double basePrice, boolean is5GCapable) {
+        super(id, name, type);
         this.brand = brand;
         this.model = model;
         this.os = os;

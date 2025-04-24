@@ -1,4 +1,4 @@
-public class Laptop implements Technology {
+public class Laptop extends Product {
 
     private String brand;
     private String model;
@@ -11,12 +11,11 @@ public class Laptop implements Technology {
     private double basePrice;
     private boolean isTouchscreen;
 
-    public Laptop() {
-    }
-
-    public Laptop(String brand, String model, String processor,
-                  int ramGB, int storageGB, double screenSize,
-                  int batteryLife, double weight, double basePrice, boolean isTouchscreen) {
+    public Laptop(int id, String name, String type,
+                  String brand, String model, String processor,
+                  int ramGB, int storageGB, double screenSize, int batteryLife,
+                  double weight, double basePrice, boolean isTouchscreen) {
+        super(id, name, type);
         this.brand = brand;
         this.model = model;
         this.processor = processor;
@@ -27,6 +26,10 @@ public class Laptop implements Technology {
         this.weight = weight;
         this.basePrice = basePrice;
         this.isTouchscreen = isTouchscreen;
+    }
+
+    public Laptop(int id, String name, String type) {
+        super(id, name, type);
     }
 
     public String getBrand() {

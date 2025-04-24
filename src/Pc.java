@@ -1,4 +1,4 @@
-public class Pc implements Technology {
+public class Pc extends Product{
 
     private String brand;
     private String processor;
@@ -9,9 +9,15 @@ public class Pc implements Technology {
     private double basePrice;
     private boolean hasOSPreinstalled;
 
-    public Pc(String brand, String processor, int ramGB,
-              int storageGB, String gpu, String formFactor,
+    public Pc(int id, String name, String type) {
+        super(id, name, type);
+    }
+
+    public Pc(int id, String name, String type, String brand,
+              String processor, int ramGB, int storageGB,
+              String gpu, String formFactor,
               double basePrice, boolean hasOSPreinstalled) {
+        super(id, name, type);
         this.brand = brand;
         this.processor = processor;
         this.ramGB = ramGB;
